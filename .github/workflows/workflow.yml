@@ -1,0 +1,18 @@
+name: CI Test Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Echo message
+        run: echo "CI is working! Hello from GitHub Actions"
+
+      - name: Another echo
+        run: echo "Manual trigger successful!"
